@@ -38,11 +38,11 @@ console.log(txt.length);
 // Выписать в комментариях. Вам необходимо найти все переменные,
 // функции, аргументы и параметры.
 // Запишите имена в соответсвующие пункты
-// Переменные:
-// Функции:
-// Встроенные функции:
-// Аргументы:
-// Параметры:
+// Переменные: years, myDog, guests
+// Функции: dogYears, makeTea, secret
+// Встроенные функции: console.log
+// Аргументы: 'Rex', 4, 2, 'Earl Grey'
+// Параметры: dogname, age, cups, tea
 // function dogYears(dogname, age){
 //     let years = age * 2;
 //     console.log(dogName + ' is ' + years + ' years old');
@@ -63,14 +63,24 @@ console.log(txt.length);
 
 
 // Дана строка 'JS'. Сделайте из нее строку 'js'.
+let txt1 = 'JS';
 
+console.log(txt1.toLowerCase());
 
 // Дана строка 'я люблю JS!'. Вырежите из нее слово 
 // 'люблю' и слово 'javascript' тремя разными способами 
 // (через substr, substring, slice).
+let txt2 = 'я люблю JS!';
+
+console.log(txt2.substr(2, 8));
+console.log(txt2.substring(2, 10));
+console.log(txt2.slice(2, 10));
 
 // Дана строка 'я люблю JS!'. Найдите позицию 
 // подстроки 'люблю'.
+let txt3 = 'я люблю JS!';
+
+console.log(txt3.indexOf('люблю'));
 
 // Дана переменная txt, в которой хранится какой-либо текст. 
 // Реализуйте обрезание длинного текста по следующему 
@@ -79,17 +89,37 @@ console.log(txt.length);
 // первые n символов строки txt и добавим в конец 
 // троеточие '...'. В противном случае в переменную 
 // result запишем содержимое переменной txt.
+let txt4 = 'Lorem ipsum dolor sit amet consectetur.';
+let n = 13; // Кол-во символов
+let result = '';
+
+if (txt4.length >= n) {
+    result = txt4.substring(0, n) + '...';    
+} else {
+    result = txt4;
+}
+
+console.log(result);
 
 // Для решения задач данного блока вам понадобятся следующие 
 // методы: replace.
 // Дана строка 'Я-люблю-JS!'. 
 // Замените все  '-' на '!' с помощью глобального 
 // поиска и замены.
+let txt5 = 'Я-люблю-JS!';
+
+console.log(txt5.replace(/-/g, '!'));
 
 // Дана строка 'я люблю JS'. С помощью метода split 
 // запишите каждое слово этой строки в отдельный элемент 
 // массива.
+let txt6 = 'я люблю JS';
+
+console.log(txt6.split(' '));
 
 // Дана строка 'привет мир'. С помощью метода split 
 // запишите каждый символ этой строки в отдельный элемент 
 // массива.
+let txt7 = 'привет мир';
+
+console.log(txt7.split(''));
